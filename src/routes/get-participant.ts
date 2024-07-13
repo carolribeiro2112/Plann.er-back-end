@@ -27,7 +27,7 @@ export async function getParticipant(app: FastifyInstance) {
       })
 
       if (!participant) {
-        throw new Error('Participant not found')
+        throw new ClientError('Participant not found')
       }
 
       return { participant }
